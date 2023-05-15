@@ -2,6 +2,8 @@ document.getElementById('donante-formulario').addEventListener('submit', functio
     e.preventDefault();
   
     var nombre = document.getElementById('nombre').value;
+    var pais = document.getElementById('pais').value;
+    var zipcode = document.getElementById('zipcode').value;
     var email = document.getElementById('email').value;
     var telefono = document.getElementById('telefono').value;
   
