@@ -4,8 +4,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
-
 }
 
 section {
@@ -57,10 +55,44 @@ nav ul li a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* .icono {
-    display: inline-block;
-    width: 0.5px; /* Ajusta el ancho deseado de la imagen 
-    height: 0.5px; /* Ajusta la altura deseada de la imagen 
-    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto
+ /* Estilos para la animación */
+  @keyframes moveImage {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
-  dejo el codigo aca por si alguno sabe como cuerno hacer para que quede bien*/
+
+  /* Estilos para la imagen */
+  .miImagen {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-name: moveImage;
+  }
+
+  .miImagen:hover {
+    animation-play-state: paused;
+  }
+
+  #testimonios div {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  #testimonios img.miImagen {
+    float: left;
+    margin-right: 20px;
+    max-width: 100px;
+  }
+
+  #testimonios p {
+    float: right;
+  }
+  

@@ -10,6 +10,33 @@
   <title>Concientización de Donación de Médula Ósea</title>
   <script src="https://kit.fontawesome.com/00c6e5e4ac.js" crossorigin="anonymous"></script>
   <link rel="icon" href="./images/favicon.ico">
+   <style>
+    /* Estilos para la animación */
+    @keyframes moveImage {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(50px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* Estilos para la imagen */
+    .miIagen {
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-name: moveImage;
+    }
+
+    .miImagen:hover {
+      animation-play-state: paused;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -162,7 +189,7 @@
         hito nacional.</p>
     </div>
     <div>
-      <img src="images/Martin.jpg" alt="Foto de Martín, donante de Médula Ósea">
+      <img class="miImagen" src="images/Martin.jpg" alt="Foto de Martín, donante de Médula Ósea">
       <h4>Martín, 37 años</h4>
       <p>Es de Santa Rosa, La pampa, y es uno de los dontantes de 2022. "Todo comenzó en 2018 cuando, a partir de una
         campaña de búsqueda de donantes, decidí colaborar y aportar mi granito de arena. El trámite de inscripción fue
@@ -179,7 +206,7 @@
         persona, que puede ser de nuestro país o de cualquier luger del mundo".</p>
     </div>
     <div>
-      <img src="images/Enrique.png" alt="Foto de Enrique, receptor de Médula Ósea">
+      <img class="miImagen" src="images/Enrique.png" alt="Foto de Enrique, receptor de Médula Ósea">
       <h4>Enrique, 17 años</h4>
       <p>"Soy una Quimera" afirma Enrique.</p>
       <p>"Con mis 17 años, me dieron la fatídica noticia de que tenía un linfoma de burkitt, el cual después de
