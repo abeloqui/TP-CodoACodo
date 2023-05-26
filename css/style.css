@@ -1,11 +1,13 @@
-body {
-  width: 940px;
-  margin: 0;
-  padding: 0;
+html {
+  background-image: url("../images/fondo.jpg");
+  background-size: cover;
+  font-size: larger;
 }
-main{
+
+main {
   width: 940px;
   margin: 0 auto;
+  padding-top: 60px;
 }
 
 section {
@@ -13,17 +15,17 @@ section {
   padding: 20px;
 }
 
-
-
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
-  padding: 10px;
+  height: fit-content;
+  background-color: pink;
+  padding: 20px;
   display: flex;
   justify-content: center;
+  z-index: 50;
 }
 
 ul {
@@ -33,7 +35,6 @@ ul {
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
 }
 
 nav ul li {
@@ -45,17 +46,95 @@ nav ul li a {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
+  font-size: large;
   text-decoration: none;
+  cursor: pointer;
 }
+
 nav a:hover {
-  color: #c78c19;
+  color: #f1a7a7;
   text-decoration: underline;
 }
 
-#home .donar-info img {
-  width: 500px;
+nav img {
+  width: 60px;
+  align-items: left;
+  padding-right: 150px;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 33%;
+}
+
+.introduccion {
+  text-align: justify;
+  font-size: larger;
+}
+
+#home[ position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px;
+display: flex;
+justify-content: center;
+
+] #home .donar-info img {
+  width: 940px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#home .banner {
+  width: 100%;
+}
+
+h3,
+h2 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#ser-donate {
+  padding: 40px 20px;
+}
+
+.ser-donate {
+  position: absolute;
+  width: 940px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: x-large;
+}
+
+.ser-donate img.icono {
+  position: relative;
+  float: left;
+  padding: auto;
+  z-index: -100;
+}
+
+.ser-donate li.icono {
+  position: relative;
+  float: right;
+}
+
+iframe {
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.contraindicacion {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.miImagen {
+  width: 40px !important;
 }
 
 /* Estilos para la animación */
@@ -85,16 +164,34 @@ nav a:hover {
   animation-play-state: paused;
 }
 
+.miImagen {
+  width: 150px !important;
+  float: left;
+  padding: 10px 55px 0 0;
+}
+
+h4 {
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  text-decoration: underline;
+  color: #f1a7a7;
+}
+
 #testimonios div {
   position: absolute;
   width: 940px;
   overflow: hidden;
   margin: 0 auto;
+  padding: 35px;
+  font-size: x-large;
 }
 
 #testimonios img.miImagen {
   position: relative;
   float: left;
+  padding: auto;
+  z-index: -100;
 }
 
 #testimonios p {
@@ -102,25 +199,58 @@ nav a:hover {
   float: right;
 }
 
-form{
+.cita {
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+aside {
+  float: right;
+  width: 25%;
+  margin: 0 0;
+  padding: 105px 25px;
+  width: 40%;
+}
+form {
   margin: 40px 0;
 }
 
-form label{
+form label {
   display: block;
   font-size: 20px;
   margin: 0 0 10px;
 }
 
-form input, form textarea{
+form input,
+form textarea {
   display: block;
   margin: 0 0;
   padding: 10px 25px;
-  width: 50%;
+  width: 40%;
+}
+
+
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(172, 168, 168);
+  border: none;
+  border-radius: 10px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: pink;
+  transform: scale(1.1);
 }
 
 footer {
-  background-color: #333;
+  background-color: pink;
   color: #fff;
   padding: 10px;
   text-align: center;
