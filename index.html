@@ -246,24 +246,24 @@
           nos pondremos en contacto contigo:</p>
 
         <form id="donante-formulario">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" required>
+          <label for="nombre">Nombre y Apellido:</label>
+          <input type="text" id="nombre" required placeholder="Juan Perez">
           <br>
           <label for="pais">Pais de residencia:</label>
-          <input type="text" id="nombre" required>
+          <input type="text" id="pais" required placeholder="Argentina">
           <br>
           <label for="zipCode">Código Postal:</label>
-          <input type="text" id="nombre" required>
+          <input type="text" id="zipCode" required placeholder="00000"">
           <br>
           <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" required placeholder="JK7fK@example.com"">
           <br>
           <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" required>
+          <input type="tel" id="telefono" required placeholder="+54 9 1234 5678"">
+          <br>          
+          <textarea cols="65" rows="10" id="mensaje" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
           <br>
-          <textarea name="message" placeholder="Mensaje"></textarea>
-          <br>
-          <button type="submit">Enviar</button>
+          <input type="submit" value="Enviar formulario">
           <br>
 
         </form>

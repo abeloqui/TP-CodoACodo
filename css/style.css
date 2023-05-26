@@ -1,9 +1,11 @@
 body {
+  width: 940px;
   margin: 0;
   padding: 0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+}
+main{
+  width: 940px;
+  margin: 0 auto;
 }
 
 section {
@@ -12,12 +14,6 @@ section {
 }
 
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
 
 header {
   position: fixed;
@@ -99,10 +95,33 @@ nav a:hover {
 #testimonios img.miImagen {
   position: relative;
   float: left;
-
 }
 
 #testimonios p {
   position: relative;
   float: right;
+}
+
+form{
+  margin: 40px 0;
+}
+
+form label{
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+form input, form textarea{
+  display: block;
+  margin: 0 0;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
