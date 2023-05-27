@@ -1,12 +1,11 @@
 function traerDatosAPI() {
-  fetch('https://randomuser.me/api') // API a leer
-      // Cuando ha finalizado la lectura
-      // guardo en datos el texto leido:
+  fetch('https://randomuser.me/api') 
+     
       .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
       .then(datos => {
           console.log(datos)
           // Y luego copio ese texto en #contenido.
-          contenido.innerHTML += "\n
+          contenido.innerHTML +=
               `<div class="tarjeta">
                <img src = "${datos.results[0].picture.large}"</img><br>
                Nombre: ${datos.results[0].name.last}, ${datos.results[0].name.first}<br>
