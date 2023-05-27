@@ -10,6 +10,7 @@
   <link rel="icon" href="./images/icono.png">
   <title>Fundación Dona es Vida</title>
   <script src="https://kit.fontawesome.com/00c6e5e4ac.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="icon" href="./images/favicon.ico">
   <style>
     /* Estilos para la animación */
@@ -287,7 +288,7 @@
           mi vida."</p>
       </div>
     </section>
-
+    <div id="datos-api"></div>
     <section id="ser-donante">
       <h2>Ser Donante</h2>
       <div class="ser-donante-info">
@@ -295,39 +296,42 @@
         <aside>
           <img id="gif" src="images/Logo.gif"></video>
         </aside>
-        
+
         <form id="donante-formulario">
           <label for="nombre">Nombre y Apellido:</label>
-          <input type="text" id="nombre" required placeholder="Juan Perez">
+          <input type="text" name="nombre" id="nombre" required placeholder="Juan Perez">
           <br>
           <label for="pais">Pais de residencia:</label>
-          <input type="text" id="pais" required placeholder="Argentina">
+          <input type="text" name="pais" id="pais" required placeholder="Argentina">
           <br>
           <label for="zipCode">Código Postal:</label>
-          <input type="text" type="number" id="zipCode" required placeholder="00000"">
+          <input type="text" type="number" name="zipCode" id="zipCode" required placeholder="00000"">
           <br>
           <label for=" email">Correo electrónico:</label>
-          <input type="email" type="email" id="email" required placeholder="email@dominio.com"">
+          <input type="email" type="email" name="email" id="email" required placeholder="email@dominio.com"">
           <br>
           <label for=" telefono">Teléfono:</label>
-          <input type="tel" type="tel" id="telefono" required placeholder="(XX) XXXX XXXX">
+          <input type="tel" type="tel" name="telefono" id="telefono" required placeholder="(XX) XXXX XXXX">
           <br>
-          <textarea cols="65" rows="10" id="mensaje" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
+          <textarea cols="65" rows="10" name="mensaje" name="mensaje" placeholder="Dejanos tu mensaje"></textarea>
           <br>
-          <input type="submit" class="enviar" value="Enviar formulario">
+          <input type="submit" id ="enviar" value="Enviar formulario">
           <br>
 
         </form>
         
       </div>
+      
     </section>
+    
 
-    <script src="formulario.js"></script>
+    <script src="main.js"></script>
   </main>
   <footer>
     <p>Sitio Web de Donación de Médula Ósea - Codo a Codo 2023 -</p>
     <p><a href="https://www.freepik.com/vectors/background">Imagen de fondo</a> Link de pagina donde se obtuve el backgroud de la pagina</p>
   </footer>
+  <script src="main.js"></script>
 </body>
 
 </html>
