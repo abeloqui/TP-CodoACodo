@@ -10,7 +10,6 @@
   <link rel="icon" href="./images/icono.png">
   <title>Fundación Dona es Vida</title>
   <script src="https://kit.fontawesome.com/00c6e5e4ac.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="icon" href="./images/favicon.ico">
   <style>
     /* Estilos para la animación */
@@ -288,7 +287,7 @@
           mi vida."</p>
       </div>
     </section>
-    <div id="datos-api"></div>
+   
     <section id="ser-donante">
       <h2>Ser Donante</h2>
       <div class="ser-donante-info">
@@ -321,8 +320,16 @@
         </form>
         
       </div>
-      
+     <div class="container">
+        <button onclick="traerDatosAPI()">Contactate con un Receptor</button>
+    </div>
+
+    <div id="contenido" >
+        <!-- Aquí insertaremos contenido que recuperamos
+        mediante la API -->
+    </div>
     </section>
+    
     
 
     <script src="main.js"></script>

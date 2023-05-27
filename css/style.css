@@ -229,10 +229,7 @@ form textarea {
   padding: 10px 25px;
   width: 40%;
 }
-
-
-
-.enviar {
+#enviar {
   width: 40%;
   padding: 15px 0;
   font-size: 18px;
@@ -244,11 +241,29 @@ form textarea {
   cursor: pointer;
 }
 
-.enviar:hover {
+#enviar:hover {
   background: pink;
   transform: scale(1.1);
 }
 
+.container button{
+  width: 40%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(172, 168, 168);
+  border: none;
+  border-radius: 10px;
+  transition: 1s all;
+  cursor: pointer;
+}
+.container button:hover{
+  background: pink;
+  transform: scale(1.1);
+}
+#asesor{
+  width: 240px;
+}
 footer {
   background-color: pink;
   color: #fff;

@@ -1,53 +1,23 @@
-//nuevo intento
-
-// Obtener el elemento con el ID 'datos-api'
-var datosApiElement = document.getElementById('datos-api');
-
-// Función para mostrar los datos en la página
-function mostrarDatosAPI(datos) {
-  // Actualizar el contenido del elemento con los datos de la API
-  datosApiElement.innerHTML = JSON.stringify(datos);
+function traerDatosAPI() {
+  fetch('https://randomuser.me/api') // API a leer
+      // Cuando ha finalizado la lectura
+      // guardo en datos el texto leido:
+      .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
+      .then(datos => {
+          console.log(datos)
+          // Y luego copio ese texto en #contenido.
+          contenido.innerHTML +=
+              `<div class="tarjeta">
+               <img src = "${datos.results[0].picture.large}"</img><br>
+               Nombre: ${datos.results[0].name.last}, ${datos.results[0].name.first}<br>
+               User: ${datos.results[0].login.username}<br>
+               Pass: ${datos.results[0].login.password}<br>
+               ${datos.results[0].email}</div>`
+      })
 }
 
-// Función para obtener los datos de la API
-function obtenerDatosAPI(callback) {
-  // Realizar la llamada a la API utilizando fetch u otro método de tu elección
-  fetch('https://rapidapi.com/standingapi-standingapi-default/api/rapidweather', {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'ad72736cb2msh3ba70d06c592ebap179ab7jsn70dca5e10242',
-      'X-RapidAPI-Host': 'standingapi-standingapi-default.p.rapidapi.com'
-    }
-  })
-    .then(function(response) {
-      // Verificar si la respuesta de la API es exitosa
-      if (response.ok) {
-        // Parsear la respuesta como JSON
-        return response.json();
-      } else {
-        // En caso de error, lanzar una excepción
-        throw new Error('Error en la llamada a la API');
-      }
-    })
-    .then(function(datos) {
-      // Llamar al callback pasando los datos de la API
-      callback(datos);
-    })
-    .catch(function(error) {
-      // Manejar el error en caso de que ocurra
-      console.log('Error:', error.message);
-    });
-}
-
-// Llamar a la función obtenerDatosAPI() y pasar la función mostrarDatosAPI como callback
-obtenerDatosAPI(mostrarDatosAPI);
-
-
-
-
-
-//document.getElementById('donante-formulario').addEventListener('submit', function (e) {
- // e.preventDefault();
+document.getElementById('donante-formulario').addEventListener('submit', function (e) {
+e.preventDefault();
  function validarFormulario() { 
   var nombre = document.getElementById('nombre').value.trim();
   var pais = document.getElementById('pais').value.trim();
