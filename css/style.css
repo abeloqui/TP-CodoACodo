@@ -277,6 +277,14 @@ form textarea {
   transform: scale(1.1);
 }
 
+.container, #datos-api {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .container button{
   width: 40%;
   padding: 15px 0;
@@ -304,27 +312,26 @@ footer {
   text-align: center;
   }
 
-
-/* En resoluciones menores a 800px */
-@media screen and (max-width: 800px) {
-  body{
-    background-color: rgb(243, 199, 206);
+/* Estilos para dispositivos pequeños */
+@media screen and (max-width: 576px) {
+    body {
+    font-size: 14px;
   }
 }
 
-
-/* En resoluciones menores a 450px */
-@media screen and (max-width: 449px){
-  .header{
-   height: 30%;
-  }
-  a {
-     display: block;
-  }
-  li {
-     display: block;
-  }
-  #home{
-    margin-top: 150px;
+/* Estilos para dispositivos medianos */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+   .container {
+    width: 80%;
+    margin: 0 auto;
   }
 }
+
+/* Estilos para dispositivos grandes */
+@media screen and (min-width: 993px) {
+    .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
